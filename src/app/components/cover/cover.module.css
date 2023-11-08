@@ -83,6 +83,9 @@
   .section {
     justify-content: center;
   }
+  .logo {
+    display: none;
+  }
   .SocialIcon {
     display: none;
   }
