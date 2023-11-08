@@ -24,12 +24,12 @@ export default function Cover() {
     >
       <div className={cover.cover_header}>
         <div>
-          {/* <Image
-            src={assets.websiteLogo}
-            width={280}
+          <Image
+            src={assets.websiteLogoGray}
+            width={140}
             height={100}
             className={cover.logo}
-          /> */}
+          />
         </div>
 
         <ul className={cover.ul}>

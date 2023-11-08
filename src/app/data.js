@@ -1,6 +1,7 @@
 export const assets = {
   // websiteLogo: "/logo white.png",
   websiteLogo: "/20231108_164013_0000.png",
+  websiteLogoGray: "/20231108_171854_0000.png",
   whatsappIcon: "/3670051.png",
   social: [
     {
