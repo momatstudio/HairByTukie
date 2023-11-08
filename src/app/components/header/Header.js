@@ -37,8 +37,8 @@ export default function TopHeader() {
         {/* <span>TUKIE's HAIR DRESSING</span> */}
         <Image
           src={assets.websiteLogo}
-          width={280}
-          height={100}
+          width={120}
+          height={80}
           className={header.logo}
         />
 

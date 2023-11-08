@@ -80,7 +80,14 @@
     justify-content: center;
   }
   .section .cover_header {
+    /* display: none; */
+  }
+  .section .cover_header ul {
     display: none;
+  }
+  .logo {
+    /* height: 50px;
+    width: 100px; */
   }
   .container {
     justify-content: center;
@@ -121,7 +128,7 @@
     align-items: center;
     /* border: 1px solid; */
     margin: 0;
-    padding: 0;
+    padding-top: 200px;
   }
   .button_one {
     margin-bottom: 20px;
@@ -147,7 +154,6 @@
     font-size: 45px;
   }
   .button_two {
-    /* display: none; */
   }
   .button_one {
     /* background-color: #ff0099; */
