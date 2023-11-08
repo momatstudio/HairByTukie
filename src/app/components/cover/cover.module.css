@@ -129,7 +129,7 @@
 }
 @media (max-width: 600px) {
   .section {
-    height: fit-content;
+    height: 100vh;
   }
   .right {
     display: flex;
