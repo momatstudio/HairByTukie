@@ -30,7 +30,7 @@ export default function TopHeader() {
 
   return (
     <>
-      <header className={header.topHeader}>
+      <header className={header.topHeader} id="home">
         <span>Call Us: 076 8080 517</span>
       </header>
 

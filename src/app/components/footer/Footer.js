@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import footer from "./footer.module.css";
 import Image from "next/image";
 import { assets } from "@/app/data";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -21,12 +23,24 @@ const Footer = () => {
       <br />
       <div className={footer.menu}>
         <ul className={footer.ul}>
-          <li className={footer.li}>Home</li>
-          <li className={footer.li}>Our Services</li>
-          <li className={footer.li}>About Us</li>
-          <li className={footer.li}>Our Gallery</li>
-          <li className={footer.li}>Testimonials</li>
-          <li className={footer.li}>Contact Us</li>
+          <ScrollLink to="home" smooth={true} duration={500}>
+            <li className={footer.li}>HOME</li>
+          </ScrollLink>
+          <ScrollLink to="our-services" smooth={true} duration={500}>
+            <li className={footer.li}>OUR SERVICES</li>
+          </ScrollLink>
+          <ScrollLink to="about-us" smooth={true} duration={500}>
+            <li className={footer.li}>ABOUT US</li>
+          </ScrollLink>
+          <ScrollLink to="our-gallery" smooth={true} duration={500}>
+            <li className={footer.li}>OUR GALLERY</li>
+          </ScrollLink>
+          <ScrollLink to="testimonials" smooth={true} duration={500}>
+            <li className={footer.li}>TESTIMONIALS</li>
+          </ScrollLink>
+          <ScrollLink to="contact-us" smooth={true} duration={500}>
+            <li className={footer.li}>CONTACT US</li>
+          </ScrollLink>
         </ul>
       </div>
       <div className={footer.website_creater}>

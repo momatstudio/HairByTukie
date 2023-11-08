@@ -5,7 +5,8 @@ import { assets, coverData } from "@/app/data";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { BiMenu, BiX } from "react-icons/bi";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import Link from "next/link";
 
 const myFont = localFont({ src: "./GreatVibes-Regular.ttf" });
 // import { Inter } from "next/font/google";
@@ -24,14 +25,14 @@ export default function Cover() {
       }}
     >
       <div className={cover.cover_header}>
-        <div>
+        <Link href="https://www.facebook.com/matthews.modika">
           <Image
             src={assets.websiteLogoGray}
             width={140}
             height={100}
             className={cover.logo}
           />
-        </div>
+        </Link>
 
         {/* <ul className={cover.ul}>
           <li className={cover.li}>OUR SERVICES</li>
@@ -43,21 +44,21 @@ export default function Cover() {
 
         <ul className={cover.ul}>
           {/* <li className={header.li}>SHOP</li> */}
-          <Link to="our-services" smooth={true} duration={500}>
+          <ScrollLink to="our-services" smooth={true} duration={500}>
             <li className={cover.li}>OUR SERVICES</li>
-          </Link>
-          <Link to="about-us" smooth={true} duration={500}>
+          </ScrollLink>
+          <ScrollLink to="about-us" smooth={true} duration={500}>
             <li className={cover.li}>ABOUT</li>
-          </Link>
-          <Link to="our-gallery" smooth={true} duration={500}>
+          </ScrollLink>
+          <ScrollLink to="our-gallery" smooth={true} duration={500}>
             <li className={cover.li}>OUR GALLERY</li>
-          </Link>
-          <Link to="testimonials" smooth={true} duration={500}>
+          </ScrollLink>
+          <ScrollLink to="testimonials" smooth={true} duration={500}>
             <li className={cover.li}>TESTIMONIALS</li>
-          </Link>
-          <Link to="contact-us" smooth={true} duration={500}>
+          </ScrollLink>
+          <ScrollLink to="contact-us" smooth={true} duration={500}>
             <li className={cover.li}>CONTACT US</li>
-          </Link>
+          </ScrollLink>
 
           {/* <li>VACANCIES</li> */}
         </ul>
