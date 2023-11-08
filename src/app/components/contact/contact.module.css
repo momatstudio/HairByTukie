@@ -45,8 +45,6 @@
   width: 95%;
   /* border: 1px solid; */
 }
-.row span {
-}
 @media (max-width: 675px) {
   .container {
     display: flex;
