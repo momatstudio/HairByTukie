@@ -8,7 +8,7 @@ export default function Gallery({ data, title, description }) {
   // console.log(data);
 
   return (
-    <section className={gallery.section}>
+    <section className={gallery.section} id="our-gallery">
       <SectionTitle title={title} description={description} />
       <div className={gallery.container}>
         {data.map((item, index) => (

@@ -5,6 +5,7 @@ import { assets } from "@/app/data";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { BiMenu, BiX } from "react-icons/bi";
+import { Link } from "react-scroll";
 
 export default function TopHeader() {
   const [menuClicked, setMenuClicked] = useState(false);
@@ -47,11 +48,22 @@ export default function TopHeader() {
 
         <ul className={header.ul}>
           {/* <li className={header.li}>SHOP</li> */}
-          <li className={header.li}>OUR SERVICES</li>
-          <li className={header.li}>ABOUT</li>
-          <li className={header.li}>OUR GALLERY</li>
-          <li className={header.li}>TESTIMONIALS</li>
-          <li className={header.li}>CONTACT US</li>
+          <Link to="our-services" smooth={true} duration={500}>
+            <li className={header.li}>OUR SERVICES</li>
+          </Link>
+          <Link to="about-us" smooth={true} duration={500}>
+            <li className={header.li}>ABOUT</li>
+          </Link>
+          <Link to="our-gallery" smooth={true} duration={500}>
+            <li className={header.li}>OUR GALLERY</li>
+          </Link>
+          <Link to="testimonials" smooth={true} duration={500}>
+            <li className={header.li}>TESTIMONIALS</li>
+          </Link>
+          <Link to="contact-us" smooth={true} duration={500}>
+            <li className={header.li}>CONTACT US</li>
+          </Link>
+
           {/* <li>VACANCIES</li> */}
         </ul>
 

@@ -5,6 +5,7 @@ import { assets, coverData } from "@/app/data";
 import Image from "next/image";
 import localFont from "next/font/local";
 import { BiMenu, BiX } from "react-icons/bi";
+import { Link } from "react-scroll";
 
 const myFont = localFont({ src: "./GreatVibes-Regular.ttf" });
 // import { Inter } from "next/font/google";
@@ -32,12 +33,33 @@ export default function Cover() {
           />
         </div>
 
-        <ul className={cover.ul}>
+        {/* <ul className={cover.ul}>
           <li className={cover.li}>OUR SERVICES</li>
           <li className={cover.li}>ABOUT</li>
           <li className={cover.li}>OUR GALLERY</li>
           <li className={cover.li}>TESTIMONIALS</li>
           <li className={cover.li}>CONTACT US</li>
+        </ul> */}
+
+        <ul className={cover.ul}>
+          {/* <li className={header.li}>SHOP</li> */}
+          <Link to="our-services" smooth={true} duration={500}>
+            <li className={cover.li}>OUR SERVICES</li>
+          </Link>
+          <Link to="about-us" smooth={true} duration={500}>
+            <li className={cover.li}>ABOUT</li>
+          </Link>
+          <Link to="our-gallery" smooth={true} duration={500}>
+            <li className={cover.li}>OUR GALLERY</li>
+          </Link>
+          <Link to="testimonials" smooth={true} duration={500}>
+            <li className={cover.li}>TESTIMONIALS</li>
+          </Link>
+          <Link to="contact-us" smooth={true} duration={500}>
+            <li className={cover.li}>CONTACT US</li>
+          </Link>
+
+          {/* <li>VACANCIES</li> */}
         </ul>
 
         <div className={cover.SocialIcon}>

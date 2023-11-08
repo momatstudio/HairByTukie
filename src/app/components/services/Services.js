@@ -8,7 +8,7 @@ export default function Services({ data, title, description }) {
   // console.log(data);
 
   return (
-    <section className={services.section}>
+    <section className={services.section} id="our-services">
       {/* <div className={services.title}>
         <h2>OUR SERVICES</h2>
         <span></span>

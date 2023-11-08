@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <section className={footer.section}>
+    <section className={footer.section} id="footer">
       <br />
       <div className={footer.contact}>
         <span>Hair By Tukie</span>

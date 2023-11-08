@@ -4,7 +4,7 @@ import contact from "./contact.module.css";
 export default function Contact() {
   const image = "/display.png";
   return (
-    <section className={contact.section}>
+    <section className={contact.section} id="contact-us">
       <div className={contact.container}>
         <div className={contact.left}>
           <b className={contact.b}>CONTACT INFO</b>

@@ -6,7 +6,7 @@ import Testimonial from "./Testimonial";
 
 export default function Testimonials() {
   return (
-    <section className={testimonials.section}>
+    <section className={testimonials.section} id="testimonials">
       <SectionTitle
         title={"TESTIMONIALS"}
         description={"Hear what our clients have to say about us"}

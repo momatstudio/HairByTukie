@@ -5,7 +5,7 @@ import { aboutMe } from "@/app/data";
 export default function About({}) {
   const { image, title, description, secondTitle } = aboutMe;
   return (
-    <section className={about.section}>
+    <section className={about.section} id="about-us">
       <div
         className={about.left}
         style={{ backgroundImage: `url(${image})` }}
