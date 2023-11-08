@@ -35,7 +35,12 @@ export default function TopHeader() {
         style={isScrolled ? { display: "flex" } : null}
       >
         {/* <span>TUKIE's HAIR DRESSING</span> */}
-        <Image src={assets.websiteLogo} width={280} height={100} />
+        <Image
+          src={assets.websiteLogo}
+          width={280}
+          height={100}
+          className={header.logo}
+        />
 
         <ul className={header.ul}>
           {/* <li className={header.li}>SHOP</li> */}
