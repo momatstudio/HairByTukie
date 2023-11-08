@@ -4,7 +4,7 @@ import header from "./header.module.css";
 import { assets } from "@/app/data";
 import Image from "next/image";
 
-export default function topHeader() {
+export default function TopHeader() {
   const [isScrolled, setScrolled] = useState(false);
 
   useEffect(() => {
