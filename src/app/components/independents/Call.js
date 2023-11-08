@@ -5,7 +5,7 @@ import { assets } from "@/app/data";
 export default function Call() {
   return (
     <>
-      <a href={"https://wa.me/0768080517"}>
+      <a href={"https://wa.me/+27768080517"}>
         <div style={{ backgroundImage: `url(${assets.whatsappIcon})` }}></div>
       </a>
 

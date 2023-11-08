@@ -2,6 +2,12 @@ import React from "react";
 import cover from "./cover.module.css";
 import { assets, coverData } from "@/app/data";
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const myFont = localFont({ src: "./GreatVibes-Regular.ttf" });
+// import { Inter } from "next/font/google";
+
+// const inter = Inter({ subsets: ["Great_Vibes"] });
 
 export default function Cover() {
   return (

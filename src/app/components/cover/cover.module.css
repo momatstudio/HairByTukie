@@ -46,13 +46,14 @@
   justify-content: center;
   align-items: end;
   width: 55%;
-  height: 90vh;
+  /* height: 90vh; */
   /* border: 1px solid; */
   padding-right: 40px;
 }
 .right {
   width: 45%;
   padding-left: 40px;
+  /* border: 1px solid; */
 }
 .h1 {
   text-align: right;
@@ -61,6 +62,7 @@
   padding: 40px 0;
   font-weight: 500;
   text-align: right;
+  /* font-size: 20px; */
 }
 .button {
 }
@@ -71,14 +73,38 @@
 }
 
 @media (max-width: 1152px) {
+  .h1 {
+    font-size: 8vw;
+  }
   .section {
-    height: fit-content;
+    justify-content: center;
   }
   .section .cover_header {
     display: none;
   }
+  .container {
+    justify-content: center;
+  }
+
+  .left {
+    display: none;
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+  }
+  .box {
+    align-items: center;
+  }
+  .h1 {
+    /* font-size: 70px; */
+    text-align: center;
+    text-shadow: 2px 2px 4px #d7d2e6;
+  }
   .description {
     text-shadow: 2px 2px 4px #d7d2e6;
+    text-align: center;
   }
   .buttons {
     padding: 0;
@@ -89,60 +115,37 @@
     padding-right: 15px;
     font-size: 10px;
   }
-}
-
-@media (max-width: 905px) {
-  .section {
-    height: fit-content;
-  }
-  .left {
-    width: 30%;
-  }
-  .right {
-    width: 70%;
-    padding-top: 150px;
-  }
-  .h1 {
-    text-align: left;
-    text-shadow: 2px 2px 4px #d7d2e6;
-  }
-}
-@media (max-width: 688px) {
-  .section {
-    height: fit-content;
-    padding-bottom: 100px;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-  .description {
-    text-align: center;
-    text-shadow: 2px 2px 4px #d7d2e6;
-  }
-  .left {
-    display: none;
-  }
-  .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-  }
-  .h1 {
-    text-align: center;
-  }
   .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .button_one,
+  .button_one {
+    margin: 20px;
+  }
   .button_two {
-    margin: 0px;
-    box-shadow: 2px 2px 4px #d7d2e6;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    height: fit-content;
+  }
+  .right {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    padding-top: 100px;
+  }
+  .h1 {
+    font-size: 45px;
   }
   .button_two {
     display: none;
+  }
+  .button_one {
+    background-color: #ff0099;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
