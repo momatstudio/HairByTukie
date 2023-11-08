@@ -72,6 +72,10 @@
   margin-left: 20px;
 }
 
+.menuIcon {
+  display: none;
+}
+
 @media (max-width: 1152px) {
   .h1 {
     font-size: 8vw;
@@ -79,8 +83,11 @@
   .section {
     justify-content: center;
   }
-  .section .cover_header {
-    /* display: none; */
+  .SocialIcon {
+    display: none;
+  }
+  .menuIcon {
+    display: block;
   }
   .section .cover_header ul {
     display: none;

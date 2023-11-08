@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import header from "./header.module.css";
 import { assets } from "@/app/data";
 import Image from "next/image";
+import localFont from "next/font/local";
+import { BiMenu, BiX } from "react-icons/bi";
 
 export default function TopHeader() {
+  const [menuClicked, setMenuClicked] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -52,12 +55,18 @@ export default function TopHeader() {
           {/* <li>VACANCIES</li> */}
         </ul>
 
-        <Image
-          src={assets.social[0].icon}
-          alt={assets.social[0].alt}
-          width={30}
-          height={30}
-        />
+        <div className={header.socialIcon}>
+          <Image
+            src={assets.social[0].icon}
+            alt={assets.social[0].alt}
+            width={30}
+            height={30}
+          />
+        </div>
+
+        <div className={header.menuIcon}>
+          {menuClicked ? <BiX size={40} /> : <BiMenu size={40} />}
+        </div>
       </header>
     </>
   );

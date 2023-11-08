@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import cover from "./cover.module.css";
 import { assets, coverData } from "@/app/data";
 import Image from "next/image";
 import localFont from "next/font/local";
+import { BiMenu, BiX } from "react-icons/bi";
 
 const myFont = localFont({ src: "./GreatVibes-Regular.ttf" });
 // import { Inter } from "next/font/google";
@@ -10,6 +12,7 @@ const myFont = localFont({ src: "./GreatVibes-Regular.ttf" });
 // const inter = Inter({ subsets: ["Great_Vibes"] });
 
 export default function Cover() {
+  const [menuClicked, setMenuClicked] = useState(false);
   return (
     <section
       className={cover.section}
@@ -37,13 +40,16 @@ export default function Cover() {
           <li className={cover.li}>CONTACT US</li>
         </ul>
 
-        <div>
+        <div className={cover.SocialIcon}>
           <Image
             src={assets.social[0].icon}
             alt={assets.social[0].alt}
             width={30}
             height={30}
           />
+        </div>
+        <div className={cover.menuIcon}>
+          {menuClicked ? <BiX size={40} /> : <BiMenu size={40} />}
         </div>
       </div>
 
