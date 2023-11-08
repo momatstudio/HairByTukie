@@ -119,12 +119,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* border: 1px solid; */
+    margin: 0;
+    padding: 0;
   }
   .button_one {
-    margin: 20px;
+    margin-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .button_two {
-    margin-bottom: 40px;
+    /* margin: 40px; */
+    margin: 0px 0px 40px 0px;
   }
 }
 @media (max-width: 600px) {
@@ -141,11 +147,10 @@
     font-size: 45px;
   }
   .button_two {
-    display: none;
+    /* display: none; */
   }
   .button_one {
-    background-color: #ff0099;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* background-color: #ff0099; */
+    background-color: #000000;
   }
 }
