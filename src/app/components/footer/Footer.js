@@ -11,7 +11,8 @@ const Footer = () => {
     <section className={footer.section} id="footer">
       <br />
       <div className={footer.contact}>
-        <h1>Hair By Tukie</h1>
+        {/* <Image src={assets.websiteLogo} width={100} height={100} /> */}
+        <h1>Hair by Tukie</h1>
         <br />
         <span>076 8080 517</span>
         <br />

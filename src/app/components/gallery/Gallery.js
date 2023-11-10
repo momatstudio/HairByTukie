@@ -7,6 +7,8 @@ import { useState } from "react";
 // import { servicesData } from "@/app/data";
 
 export default function Gallery() {
+  // const slicedWork = myWork.slice(0, 8);
+
   const [isViewAllActive, setIsViewAllActive] = useState(false);
   // console.log(data);
 

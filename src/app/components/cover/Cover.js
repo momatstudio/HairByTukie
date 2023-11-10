@@ -24,8 +24,6 @@ export default function Cover() {
         className={cover.section}
         style={{
           backgroundImage: `url("Web 1920 – 1.png")`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
         }}
       >
         <div className={cover.cover_header}>
@@ -70,13 +68,15 @@ export default function Cover() {
               />
             </Link>
           </div>
-          <ScrollLink to="title" smooth={true} duration={500}>
-            <div
-              className={cover.menuIcon}
-              onClick={() => setMenuClicked(true)}
-            >
-              {<BiMenu size={40} />}
-            </div>
+
+          <ScrollLink
+            to="title"
+            smooth={true}
+            duration={500}
+            className={cover.menuIcon}
+            onClick={() => setMenuClicked(true)}
+          >
+            {<BiMenu size={40} />}
           </ScrollLink>
         </div>
 

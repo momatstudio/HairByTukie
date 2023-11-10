@@ -48,27 +48,43 @@ export const servicesData = [
 ];
 export const myWork = [
   {
+    id: "0",
+    name: "staight up",
     image: "/images.jpeg",
   },
   {
+    id: "1",
+    name: "staight back",
     image: "/straight-back.jpeg",
   },
   {
+    id: "2",
+    name: "bonding",
     image: "/bonding-2.jpeg",
   },
   {
+    id: "3",
+    name: "free hand",
     image: "free-hand.jpeg",
   },
   {
+    id: "4",
+    name: "staight up",
     image: "/images.jpeg",
   },
   {
+    id: "5",
+    name: "staight back",
     image: "/straight-back.jpeg",
   },
   {
+    id: "6",
+    name: "bonding",
     image: "/bonding-2.jpeg",
   },
   {
+    id: "7",
+    name: "free hand",
     image: "free-hand.jpeg",
   },
 ];

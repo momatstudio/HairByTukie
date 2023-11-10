@@ -48,6 +48,7 @@ export default function TopHeader({ condition }) {
               className={header.logo}
             />
           </Link>
+
           <ul>
             {/* <li className={header.li}>SHOP</li> */}
             <Link to="our-services" smooth={true} duration={500}>
@@ -68,6 +69,7 @@ export default function TopHeader({ condition }) {
 
             {/* <li>VACANCIES</li> */}
           </ul>
+
           <div className={header.socialIcon}>
             <Image
               src={assets.social[0].icon}

@@ -15,12 +15,13 @@
 .view_all li {
   cursor: pointer;
   list-style: none;
-  padding: 20px;
-  margin: 5px;
-  border: 1px solid #edebf2;
+  border-bottom: 3px solid #ffffff;
+  font-variant-caps: all-petite-caps;
+  padding-bottom: 15px;
+  margin: 10px;
 }
-.view_all span:hover {
-  text-decoration: underline;
+.view_all li:hover {
+  border-bottom: 3px solid #ff0099;
 }
 .title {
   /* padding: 40px 0; */
