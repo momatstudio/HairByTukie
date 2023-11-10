@@ -39,13 +39,15 @@ export default function TopHeader({ condition }) {
         style={isScrolled ? { display: "flex" } : null}
       >
         <div className={header.top}>
-          <Image
-            src={assets.websiteLogo}
-            alt={assets.websiteLogo}
-            width={120}
-            height={80}
-            className={header.logo}
-          />
+          <Link to="home" smooth={true} duration={500}>
+            <Image
+              src={assets.websiteLogo}
+              alt={assets.websiteLogo}
+              width={120}
+              height={80}
+              className={header.logo}
+            />
+          </Link>
           <ul>
             {/* <li className={header.li}>SHOP</li> */}
             <Link to="our-services" smooth={true} duration={500}>

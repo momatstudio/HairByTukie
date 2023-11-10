@@ -93,9 +93,11 @@ export default function Cover() {
               <button className={cover.button_one}>
                 {coverData.buttonOne}
               </button>
-              <button className={cover.button_two}>
-                {coverData.buttonTwo}
-              </button>
+              <ScrollLink to="our-gallery" smooth={true} duration={500}>
+                <button className={cover.button_two}>
+                  {coverData.buttonTwo}
+                </button>
+              </ScrollLink>
             </div>
           </div>
         </div>
