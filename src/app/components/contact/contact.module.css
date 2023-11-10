@@ -13,7 +13,8 @@
   width: 50%;
 }
 .left {
-  background-color: aqua;
+  color: white;
+  background-color: rebeccapurple;
   padding: 40px 40px 0 40px;
 }
 .right {
@@ -21,7 +22,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  background-color: rgb(255, 0, 153);
+  /* background-color: rgb(255, 0, 153); */
+  background-color: rebeccapurple;
   height: 700px;
 }
 .child {

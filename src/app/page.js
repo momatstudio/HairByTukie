@@ -16,17 +16,9 @@ export default function Home() {
     <main className={styles.main}>
       {/* <Header /> */}
       <Cover />
-      <Services
-        data={servicesData}
-        title={"OUR SERVICES"}
-        description={"This is the list of hair styles we do"}
-      />
+      <Services />
       <About />
-      <Gallery
-        data={myWork}
-        title={"OUR GALLERY"}
-        description={"These are some of the work weve done"}
-      />
+      <Gallery />
       <Testimonials />
       <Contact />
       <Footer />

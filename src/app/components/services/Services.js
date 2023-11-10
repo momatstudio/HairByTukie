@@ -2,9 +2,9 @@
 import services from "./services.module.css";
 import Service from "./Service";
 import SectionTitle from "../independents/SectionTitle";
-// import { servicesData } from "@/app/data";
+import { servicesData } from "@/app/data";
 
-export default function Services({ data, title, description }) {
+export default function Services() {
   // console.log(data);
 
   return (
@@ -13,9 +13,12 @@ export default function Services({ data, title, description }) {
         <h2>OUR SERVICES</h2>
         <span></span>
       </div> */}
-      <SectionTitle title={title} description={description} />
+      <SectionTitle
+        title="OUR SERVICES"
+        description="This is the list of hair styles we do"
+      />
       <div className={services.container}>
-        {data.map((item, index) => (
+        {servicesData.map((item, index) => (
           <Service {...item} key={index} />
         ))}
       </div>
