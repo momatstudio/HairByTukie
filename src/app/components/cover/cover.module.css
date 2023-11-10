@@ -31,6 +31,7 @@
   width: 95%;
   margin: 0 40px;
   border-bottom: 1px solid;
+  /* z-index: 20; */
 }
 
 .cover_header .span {
@@ -60,9 +61,9 @@
 .description {
   padding: 40px 0;
   font-weight: 500;
+  /* font-size: 25px; */
   text-align: right;
-}
-.button {
+  color: #000000;
 }
 
 .button_two {
@@ -120,9 +121,6 @@
     text-shadow: 2px 2px 4px #d7d2e6;
     text-align: center;
   }
-  .buttons {
-    padding: 0;
-  }
   .button_one,
   .button_two {
     padding-left: 15px;
@@ -160,10 +158,14 @@
   .h1 {
     font-size: 45px;
   }
-  .button_two {
-  }
+
   .button_one {
     /* background-color: #ff0099; */
     background-color: #000000;
+  }
+  .button_two {
+    margin-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
