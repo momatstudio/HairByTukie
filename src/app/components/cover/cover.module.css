@@ -10,7 +10,9 @@
   text-shadow: 2px 2px 4px #d7d2e6;
   cursor: pointer;
 }
-
+.logo {
+  cursor: pointer;
+}
 .section {
   /* position: relative; */
   display: flex;
@@ -74,11 +76,6 @@
 
 .menuIcon {
   display: none;
-}
-
-.logo {
-  cursor: pointer;
-  padding: 50px;
 }
 @media (max-width: 1152px) {
   .h1 {

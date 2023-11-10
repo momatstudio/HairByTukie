@@ -14,7 +14,7 @@ import Call from "./components/independents/Call";
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Header />
+      {/* <Header /> */}
       <Cover />
       <Services
         data={servicesData}
