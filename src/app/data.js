@@ -1,7 +1,7 @@
 export const assets = {
   // websiteLogo: "/logo white.png",
-  websiteLogo: "/20231108_164013_0000.png",
-  websiteLogoGray: "/20231108_171854_0000.png",
+  websiteLogoBlack: "/logo-pink-n-black.png",
+  websiteLogoWhite: "/logo-pink-n-white.png",
   whatsappIcon: "/3670051.png",
   social: [
     {
@@ -34,7 +34,7 @@ export const servicesData = [
     title: "Bonding",
   },
   {
-    image: "free-hand.jpeg",
+    image: "/free-hand.jpeg",
     title: "Free hand",
   },
   // {
@@ -65,7 +65,7 @@ export const myWork = [
   {
     id: "3",
     name: "free hand",
-    image: "free-hand.jpeg",
+    image: "/free-hand.jpeg",
   },
   {
     id: "4",
@@ -85,7 +85,7 @@ export const myWork = [
   {
     id: "7",
     name: "free hand",
-    image: "free-hand.jpeg",
+    image: "/free-hand.jpeg",
   },
 ];
 

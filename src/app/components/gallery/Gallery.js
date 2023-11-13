@@ -3,14 +3,47 @@ import gallery from "./gallery.module.css";
 import GalleryContainer from "./GalleryContainer";
 import SectionTitle from "../independents/SectionTitle";
 import { myWork } from "@/app/data";
-import { useState } from "react";
-// import { servicesData } from "@/app/data";
+import { useEffect, useState } from "react";
 
 export default function Gallery() {
-  // const slicedWork = myWork.slice(0, 8);
+  const [selectedGallery, setSelectedGallery] = useState("all");
+  const [ourGallery, setOurGallery] = useState(myWork);
+  const [filteredCategory, setFilteredCategory] = useState([]);
+  const [viewAll, setViewAll] = useState(false);
 
-  const [isViewAllActive, setIsViewAllActive] = useState(false);
-  // console.log(data);
+  useEffect(() => {
+    //display unique categories. No duplicates
+    const newCategory = ourGallery.filter(
+      (currentObj, index, self) =>
+        self.findIndex((obj) => obj.name === currentObj.name) === index
+    );
+    setFilteredCategory(newCategory);
+  }, []);
+
+  const GalleriesContainer = () => {
+    return !viewAll ? (
+      <div className={gallery.container}>
+        {selectedGallery === "all"
+          ? ourGallery
+              .slice(0, 4)
+              .map((item, index) => <GalleryContainer {...item} key={index} />)
+          : ourGallery
+              .filter((item) => item.name === selectedGallery)
+              .slice(0, 4)
+              .map((item, index) => <GalleryContainer {...item} key={index} />)}
+      </div>
+    ) : (
+      <div className={gallery.container}>
+        {selectedGallery === "all"
+          ? ourGallery.map((item, index) => (
+              <GalleryContainer {...item} key={index} />
+            ))
+          : ourGallery
+              .filter((item) => item.name === selectedGallery)
+              .map((item, index) => <GalleryContainer {...item} key={index} />)}
+      </div>
+    );
+  };
 
   return (
     <section className={gallery.section} id="our-gallery">
@@ -18,21 +51,33 @@ export default function Gallery() {
         title="OUR GALLERY"
         description="These are some of the work weve done"
       />
-      <ul className={gallery.view_all}>
-        <li onClick={() => setIsViewAllActive(!isViewAllActive)}>All</li>
-        <li onClick={() => setIsViewAllActive(!isViewAllActive)}>
-          Straight Back
+
+      <ul className={gallery.view}>
+        <li
+          onClick={() => setSelectedGallery("all")}
+          className={
+            selectedGallery === "all" ? gallery.highlight_element : null
+          }
+        >
+          {"All"}
         </li>
-        <li onClick={() => setIsViewAllActive(!isViewAllActive)}>
-          Straight Up
-        </li>
-        <li onClick={() => setIsViewAllActive(!isViewAllActive)}>Free Hand</li>
-        <li onClick={() => setIsViewAllActive(!isViewAllActive)}>Bonding</li>
-      </ul>
-      <div className={gallery.container}>
-        {myWork.map((item, index) => (
-          <GalleryContainer {...item} key={index} />
+        {filteredCategory.map((item, index) => (
+          <li
+            key={index}
+            onClick={() => setSelectedGallery(item.name)}
+            className={
+              selectedGallery === item.name ? gallery.highlight_element : null
+            }
+          >
+            {item.name}
+          </li>
         ))}
+      </ul>
+      <GalleriesContainer />
+      <div className={gallery.view_all}>
+        <span onClick={() => setViewAll(!viewAll)}>
+          View {viewAll ? "less" : "more"}
+        </span>
       </div>
     </section>
   );

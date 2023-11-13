@@ -7,26 +7,27 @@ import localFont from "next/font/local";
 import { BiMenu, BiX } from "react-icons/bi";
 import { Link as ScrollLink } from "react-scroll";
 import Link from "next/link";
-import TopHeader from "../header/Header";
+import Header from "../header/Header";
+// import { Inter } from "next/font/google";
 
 const myFont = localFont({ src: "./GreatVibes-Regular.ttf" });
 // import { Inter } from "next/font/google";
 
-// const inter = Inter({ subsets: ["Great_Vibes"] });
+// const inter = Inter({ subsets: ["Cormorant_Garamond"] });
 
 export default function Cover() {
   const [menuClicked, setMenuClicked] = useState(false);
 
   return (
     <>
-      <TopHeader condition={menuClicked} />
+      <Header condition={menuClicked} />
       <section
         className={cover.section}
         style={{
           backgroundImage: `url("Web 1920 – 1.png")`,
         }}
       >
-        <div className={cover.cover_header}>
+        {/* <div className={cover.cover_header}>
           <ScrollLink to="home" smooth={true} duration={500}>
             <Image
               src={assets.websiteLogoGray}
@@ -38,7 +39,7 @@ export default function Cover() {
           </ScrollLink>
 
           <ul className={cover.ul}>
-            {/* <li className={header.li}>SHOP</li> */}
+        
             <ScrollLink to="our-services" smooth={true} duration={500}>
               <li className={cover.li}>OUR SERVICES</li>
             </ScrollLink>
@@ -55,7 +56,7 @@ export default function Cover() {
               <li className={cover.li}>CONTACT US</li>
             </ScrollLink>
 
-            {/* <li>VACANCIES</li> */}
+           
           </ul>
 
           <div className={cover.SocialIcon}>
@@ -78,7 +79,7 @@ export default function Cover() {
           >
             {<BiMenu size={40} />}
           </ScrollLink>
-        </div>
+        </div> */}
 
         <div className={cover.container}>
           <div className={cover.box + " " + cover.left}></div>

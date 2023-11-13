@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import services from "../services/services.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Service({ image, title }) {
   const [childIsActive, setChildIsActive] = useState(false);
@@ -25,12 +27,13 @@ export default function Service({ image, title }) {
         onMouseLeave={() => setChildIsActive(false)}
       >
         {title && (
-          <div
+          <Link
+            href={"https://wa.me/+27768080517"}
             className={services.sub_title}
             style={{ display: childIsActive ? "flex" : "none" }}
           >
             BOOK NOW
-          </div>
+          </Link>
         )}
       </div>
       <div className={services.title}>

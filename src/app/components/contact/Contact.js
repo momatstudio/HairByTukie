@@ -9,7 +9,7 @@ export default function Contact() {
         <div className={contact.left}>
           <b className={contact.b}>CONTACT INFO</b>
           <br />
-          <br />
+
           <div className={contact.child}>
             <span> CALL: (076) 8080 517</span>
           </div>

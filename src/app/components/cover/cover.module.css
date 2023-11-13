@@ -19,6 +19,7 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  padding-top: 60px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,6 +55,8 @@
 .right {
   width: 45%;
   padding-left: 40px;
+  height: 92vh;
+  /* border: 1px solid; */
 }
 .h1 {
   text-align: right;

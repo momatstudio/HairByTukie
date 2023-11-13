@@ -6,8 +6,9 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import { BiMenu, BiX } from "react-icons/bi";
 import { Link } from "react-scroll";
+import { Fascinate } from "next/font/google";
 
-export default function TopHeader({ condition }) {
+export default function Header({ condition }) {
   const [menuClicked, setMenuClicked] = useState(condition);
   const [isScrolled, setScrolled] = useState(false);
 
@@ -20,7 +21,7 @@ export default function TopHeader({ condition }) {
   }, []);
 
   const handleScroll = () => {
-    const scrollThreshold = 110;
+    const scrollThreshold = 30;
     if (window.scrollY > scrollThreshold) {
       setScrolled(true);
     } else {
@@ -36,14 +37,30 @@ export default function TopHeader({ condition }) {
 
       <header
         className={header.header}
-        style={isScrolled ? { display: "flex" } : null}
+        style={
+          isScrolled
+            ? {
+                display: "flex",
+                backgroundColor: "white",
+                border: "none",
+                margin: 0,
+              }
+            : null
+        }
       >
         <div className={header.top}>
-          <Link to="home" smooth={true} duration={500}>
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            onClick={() => setMenuClicked(false)}
+          >
             <Image
-              src={assets.websiteLogo}
-              alt={assets.websiteLogo}
-              width={120}
+              src={
+                isScrolled ? assets.websiteLogoBlack : assets.websiteLogoWhite
+              }
+              alt={assets.websiteLogoBlack}
+              width={100}
               height={80}
               className={header.logo}
             />
@@ -79,18 +96,26 @@ export default function TopHeader({ condition }) {
             />
           </div>
 
-          <div
+          <Link
+            to="title"
+            smooth={true}
+            duration={500}
             className={header.menuIcon}
             onClick={() => setMenuClicked(!menuClicked)}
           >
             {menuClicked ? <BiX size={40} /> : <BiMenu size={40} />}
-          </div>
+          </Link>
         </div>
-        {menuClicked ? (
+        {menuClicked && isScrolled ? (
           <div className={header.nav}>
             <ul>
               {/* <li className={header.li}>SHOP</li> */}
-              <Link to="home" smooth={true} duration={500}>
+              <Link
+                to="home"
+                smooth={true}
+                duration={500}
+                onClick={() => setMenuClicked(false)}
+              >
                 <li className={header.li}>HOME</li>
               </Link>
               <Link to="our-services" smooth={true} duration={500}>

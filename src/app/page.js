@@ -9,11 +9,12 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Gallery from "./components/gallery/Gallery";
 import Call from "./components/independents/Call";
+import AllGallery from "./components/gallery/AllGallery";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      {/* <Header /> */}
+      {/* <AllGallery /> */}
       <Cover />
       <Services />
       <About />
